@@ -17,7 +17,10 @@ node_modules: package.json
 	npm install
 	touch $@
 
+test:
+	jshint data/json/*.json
+
 clean:
 	rm -rf node_modules
 
-.PHONY: clean
+.PHONY: test clean
